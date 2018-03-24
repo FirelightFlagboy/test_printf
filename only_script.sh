@@ -6,13 +6,13 @@
 #    By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/13 11:40:28 by fbenneto          #+#    #+#              #
-#    Updated: 2018/03/15 15:54:37 by fbenneto         ###   ########.fr        #
+#    Updated: 2018/03/24 15:45:15 by fbenneto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 flags=0
-INCLUDE_DIR=../includes/
-MAKEFILE_DIR=./
+INCLUDE_DIR=~/repo/ft_printf/includes/
+MAKEFILE_DIR=~/repo/ft_printf/.
 echo $0
 parsed_options=$(
 	getopt :wp "$@"

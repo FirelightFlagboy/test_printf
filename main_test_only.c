@@ -6,7 +6,7 @@
 /*   By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 14:00:29 by fbenneto          #+#    #+#             */
-/*   Updated: 2018/03/24 16:13:48 by fbenneto         ###   ########.fr       */
+/*   Updated: 2018/03/29 10:21:24 by fbenneto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1255,6 +1255,55 @@ int		ft_test_23(void)
 	return (error);
 }
 
+int		ft_test_24(void)
+{
+	int *my = ft_get_tab();
+	int *you = ft_get_tab();
+	int error = 0;
+	int i = -1;
+	int p = -1;
+	int nt = 24; //nb_test
+	double NaN = 0.0 / 0.0;
+	double inf_p = 1.0 / 0.0;
+	double inf_n = -1.0 / 0.0;
+	printf("\n");
+	printf("=====================\nft_test_%d\n=====================\n", nt);
+	my[++i] =ft_printf("0 - |%f|\n", 0.42);
+	you[++p] =	printf("0 - |%f|\n", 0.42);
+	my[++i] =ft_printf("1 - inf p test : |%f|\n", inf_p);
+	you[++p]=	printf("1 - inf p test : |%f|\n", inf_p);
+	my[++i] =ft_printf("2 - inf n test : |%f|\n", inf_n);
+	you[++p]=	printf("2 - inf n test : |%f|\n", inf_n);
+	my[++i] =ft_printf("3 - nan test : |%f|\n", NaN);
+	you[++p]=	printf("3 - nan test : |%f|\n", NaN);
+	my[++i] =ft_printf("4 - |%f|\n", __FLT_MAX__);
+	you[++p]=	printf("4 - |%f|\n", __FLT_MAX__);
+	my[++i] =ft_printf("5 - |%f|\n", __FLT_MIN__);
+	you[++p]=	printf("5 - |%f|\n", __FLT_MIN__);
+	my[++i] =ft_printf("6 - |%10f|\n", 0.42);
+	you[++p]=	printf("6 - |%10f|\n", 0.42);
+	my[++i] =ft_printf("7 - |%.10f|\n", 0.42);
+	you[++p]=	printf("7 - |%.10f|\n", 0.42);
+	my[++i] =ft_printf("8 - |%.10f|\n", -785.640625);
+	you[++p]=	printf("8 - |%.10f|\n", -785.640625);
+	my[++i] =ft_printf("8 - |%f| |%F|\n", 1.42, 1.42);
+	you[++p]=	printf("8 - |%f| |%F|\n", 1.42, 1.42);
+	my[++i] =ft_printf("8 - |%f| |%F|\n", 1.42, 1.42);
+	you[++p]=	printf("8 - |%f| |%F|\n", 1.42, 1.42);
+	(void)p;
+	printf("\n");
+	i = -1;
+	while (++i < NB_TEST)
+		if ((my[i] != 0 || you[i] != 0) && my[i] != you[i])
+		{
+			printf("%1$d> ft_printf[%1$d] = %2$d printf[%1$d] = %3$d\n", i, my[i], you[i]);
+			error = 1;
+		}
+	free(my);
+	free(you);
+	return (error);
+}
+
 /*
 int		ft_test_n123(void)
 {
@@ -1284,7 +1333,7 @@ int		ft_test_n123(void)
 
 int		main(int argc, char **argv)
 {
-	int		nb_fc = 23;
+	int		nb_fc = 24;
 	char	*test_to_make = ft_strnew(nb_fc);
 	char	stres[NB_TEST];
 	int		i = -1;
@@ -1366,7 +1415,8 @@ int		main(int argc, char **argv)
 		stres[i] = ft_test_22();
 	if (test_to_make[++i])
 		stres[i] = ft_test_23();
-
+	if (test_to_make[++i])
+		stres[i] = ft_test_24();
 	i = 0;
 	printf("=====%s=====\n", "_-resultat-_");
 	while (i < nb_fc)

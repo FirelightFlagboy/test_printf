@@ -6,7 +6,7 @@
 #    By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/13 11:40:28 by fbenneto          #+#    #+#              #
-#    Updated: 2018/03/24 15:45:15 by fbenneto         ###   ########.fr        #
+#    Updated: 2018/03/29 10:03:55 by fbenneto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ while [ "$#" -gt 0 ]; do
 	(*) exit 1 # should never be reached.
 	esac
 done
-cmd="make -C $MAKEFILE_DIR libftprintf.a"
+cmd="make -C $MAKEFILE_DIR re"
 eval $cmd
 res=$?
 if [ $res != 0 ]

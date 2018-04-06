@@ -6,7 +6,7 @@
 /*   By: fbenneto <fbenneto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 14:00:29 by fbenneto          #+#    #+#             */
-/*   Updated: 2018/04/06 13:55:01 by fbenneto         ###   ########.fr       */
+/*   Updated: 2018/04/06 15:49:16 by fbenneto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -958,26 +958,47 @@ int		ft_test_17(void)
 	int nt = 17; //nb_test
 	printf("\n");
 	printf("=====================\nft_test_%d\n=====================\n", nt);
-	ft_printf("|{red}red{eoc}|\n");
-	ft_printf("|{black}black{eoc}|\n");
-	ft_printf("|{green}green{eoc}|\n");
-	ft_printf("|{yellow}yellow{eoc}|\n");
-	ft_printf("|{blue}blue{eoc}|\n");
-	ft_printf("|{magenta}magenta{eoc}|\n");
-	ft_printf("|{cyan}cyan{eoc}|\n");
-	ft_printf("|{white}white{eoc}|\n");
-	ft_printf("|{bold}bold{eoc}|\n");
-	ft_printf("|{underline}underline{eoc}|\n");
-	ft_printf("|{dim}dim{eoc}|\n");
-	ft_printf("|{blink}blink{eoc}|\n");
-	ft_printf("|{inverted}inverted{eoc}|\n");
-	ft_printf("|{hidden}hidden{eoc}|\n");
-	ft_printf("|{}{eoc}|\n");
-	ft_printf("|{green}{}|\n");
-	ft_printf("|bonjour|\n");
-	ft_printf("|{eoc}{}|\n");
-
-	(void)p;
+	ft_printf("%@P_RESET%@\n", P_RESET, P_RESET);
+	ft_printf("%@P_C_DEFAULT%@\n", P_C_DEFAULT, P_RESET);
+	ft_printf("%@P_BLACK%@\n", P_BLACK, P_RESET);
+	ft_printf("%@P_RED%@\n", P_RED, P_RESET);
+	ft_printf("%@P_GREEN%@\n", P_GREEN, P_RESET);
+	ft_printf("%@P_YELLOW%@\n", P_YELLOW, P_RESET);
+	ft_printf("%@P_BLUE%@\n", P_BLUE, P_RESET);
+	ft_printf("%@P_MAGENTA%@\n", P_MAGENTA, P_RESET);
+	ft_printf("%@P_CYAN%@\n", P_CYAN, P_RESET);
+	ft_printf("%@P_L_GRAY%@\n", P_L_GRAY, P_RESET);
+	ft_printf("%@P_D_GRAY%@\n", P_D_GRAY, P_RESET);
+	ft_printf("%@P_L_RED%@\n", P_L_RED, P_RESET);
+	ft_printf("%@P_L_GREEN%@\n", P_L_GREEN, P_RESET);
+	ft_printf("%@P_L_YELLOW%@\n", P_L_YELLOW, P_RESET);
+	ft_printf("%@P_L_BLUE%@\n", P_L_BLUE, P_RESET);
+	ft_printf("%@P_L_MAJENTA%@\n", P_L_MAJENTA, P_RESET);
+	ft_printf("%@P_L_CYAN%@\n", P_L_CYAN, P_RESET);
+	ft_printf("%@P_WHITE%@\n", P_WHITE, P_RESET);
+	ft_printf("%@P_BACK_DEFAULT%@\n", P_BACK_DEFAULT, P_RESET);
+	ft_printf("%@P_BACK_BLACK%@\n", P_BACK_BLACK, P_RESET);
+	ft_printf("%@P_BACK_RED%@\n", P_BACK_RED, P_RESET);
+	ft_printf("%@P_BACK_GREEN%@\n", P_BACK_GREEN, P_RESET);
+	ft_printf("%@P_BACK_YELLOW%@\n", P_BACK_YELLOW, P_RESET);
+	ft_printf("%@P_BACK_BLUE%@\n", P_BACK_BLUE, P_RESET);
+	ft_printf("%@P_BACK_MAJENTA%@\n", P_BACK_MAJENTA, P_RESET);
+	ft_printf("%@P_BACK_CYAN%@\n", P_BACK_CYAN, P_RESET);
+	ft_printf("%@P_BACK_L_GRAY%@\n", P_BACK_L_GRAY, P_RESET);
+	ft_printf("%@P_BACK_D_GRAY%@\n", P_BACK_D_GRAY, P_RESET);
+	ft_printf("%@P_BACK_L_RED%@\n", P_BACK_L_RED, P_RESET);
+	ft_printf("%@P_BACK_L_GREEN%@\n", P_BACK_L_GREEN, P_RESET);
+	ft_printf("%@P_BACK_L_YELLOW%@\n", P_BACK_L_YELLOW, P_RESET);
+	ft_printf("%@P_BACK_L_BLUE%@\n", P_BACK_L_BLUE, P_RESET);
+	ft_printf("%@P_BACK_L_MAJENTA%@\n", P_BACK_L_MAJENTA, P_RESET);
+	ft_printf("%@P_BACK_L_CYAN%@\n", P_BACK_L_CYAN, P_RESET);
+	ft_printf("%@P_BACK_WHITE%@\n", P_BACK_WHITE, P_RESET);
+	ft_printf("%@P_BOLD%@\n", P_BOLD, P_RESET);
+	ft_printf("%@P_UNDERLINE%@\n", P_UNDERLINE, P_RESET);
+	ft_printf("%@P_BLINK%@\n", P_BLINK, P_RESET);
+	ft_printf("%@P_DIM%@\n", P_DIM, P_RESET);
+	ft_printf("%@P_INVERTED%@\n", P_INVERTED, P_RESET);
+	ft_printf("%@P_HIDDEN%@\n", P_HIDDEN, P_RESET);
 	printf("\n");
 	i = -1;
 	while (++i < NB_TEST)
@@ -1002,14 +1023,14 @@ int		ft_test_18(void)
 	int nt = 18; //nb_test
 	printf("\n");
 	printf("=====================\nft_test_%d\n=====================\n", nt);
-	ft_printf("      {green}{inverted} {eoc}\n");
-	ft_printf("     {green}{inverted}   {eoc}\n");
-	ft_printf("    {green}{inverted} {cyan} {green} {red} {green} {eoc}\n");
-	ft_printf("   {green}{inverted}       {eoc}\n");
-	ft_printf("  {green}{inverted}  {blue} {green}  {yellow} {green}   {eoc}\n");
-	ft_printf(" {green}{inverted}  {white} {green}      {black} {green} {eoc}\n");
-	ft_printf("{green}{inverted}         {magenta} {green}   {eoc}\n");
-	ft_printf("      {yellow}{inverted} {eoc}\n");
+	ft_printf("      %@%@ %@\n", P_GREEN, P_INVERTED, P_RESET);
+	ft_printf("     %@%@   %@\n", P_GREEN, P_INVERTED, P_RESET);
+	ft_printf("    %@%@ %@ %@ %@ %@ %@\n", P_GREEN, P_INVERTED, P_RESET);
+	ft_printf("   %@%@       %@\n", P_GREEN, P_INVERTED, P_RESET);
+	ft_printf("  %@%@  %@ %@  %@ %@   %@\n", P_GREEN, P_INVERTED, P_BLUE, P_GREEN, P_RESET);
+	ft_printf(" %@%@  %@ %@      %@ %@ %@\n", P_GREEN, P_INVERTED, P_RESET);
+	ft_printf("%@%@         %@ %@   %@\n", P_GREEN, P_INVERTED, P_RESET);
+	ft_printf("      %@%@ %@\n", P_YELLOW, P_INVERTED, P_RESET);
 	my[++i] =ft_printf("bonjourholla%lc%n\n", L'☢', t);
 	you[++p] =	printf("bonjourholla%lc%n\n", L'☢', t + 1);
 	printf("%d %d\n", t[0], t[1]);
